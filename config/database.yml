@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: ciroflix_production
-  username: ciroflix
-  password: <%= ENV["CIROFLIX_DATABASE_PASSWORD"] %>
+  username: xspynks
+  password: 793V107s
