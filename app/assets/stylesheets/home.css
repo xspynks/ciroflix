@@ -136,7 +136,7 @@ header nav a:hover {
 }
 
 footer {
-  border-top: 1px var(--blue) solid;
+  border-top: 1px var(--blue) dashed;
   margin: 50px 0 20px 0;
   display: flex;
   justify-content: center;
