@@ -134,3 +134,21 @@ header nav a:hover {
 .video-container img {
   padding-bottom: 60px;
 }
+
+footer {
+  border-top: 1px var(--blue) solid;
+  margin: 50px 0 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  font-family: "Roboto Serif", sans-serif;
+  padding-top: 20px;
+  color: var(--white);
+}
+
+footer a {
+  color: var(--blue);
+}
