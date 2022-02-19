@@ -127,7 +127,8 @@ header nav a:hover {
 }
 
 .video-container {
-  gap: 10px;
+  display: flex;
+  gap: 7px;
 }
 
 .video-container img {
