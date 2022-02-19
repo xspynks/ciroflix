@@ -144,6 +144,7 @@ header nav a:hover {
   font-size: 20px;
   align-items: center;
   justify-content: center;
+  font-weight: 700;
 }
 
 .btn {
@@ -153,14 +154,16 @@ header nav a:hover {
   width: 200px;
   height: 30%;
   border: 0;
+  cursor: pointer;
 }
 
 .btn-2 {
   color: var(--white);
-  background-color: var(--gray);
+  background-color: rgb(90, 90, 90);
   width: 80%;
   height: 30%;
   border: 0;
+  cursor: pointer;
 }
 
 .title {
