@@ -1,40 +1,135 @@
 :root {
-    --azul: #0f63e0;
-    --branca: #FFFFFF;
-    --preta: #141414;
+  --blue: #0f63e0;
+  --white: #ffffff;
+  --black: #141414;
+  --gray: #aaaaaa;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
 }
 
 body {
-    background: var(--preta);
-    font-family: 'Times New Roman', Times, serif;
+  background: var(--black);
+  font-family: "Times New Roman", Times, serif;
+  background-image: url("https://live.mrf.io/statics/i/ps/emc.acidadeon.com/dbimagens/ciro_gomes_1024x576_16082021190709.webp?width=1200&enable=upscale");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.container {
+  margin: 0 60px 0 60px;
 }
 
-header .container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  font-family: "Roboto Serif", cursive;
+  font-weight: bold;
+
+  a {
+    text-decoration: none;
+    color: var(--white);
+  }
+}
+
+header a:hover {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+header a:visited {
+  color: var(--white);
+  text-decoration: none;
+}
+
+header .navigation-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+header .navigation-2 {
+  display: flex;
+  gap: 15px;
+}
+
+.navigation-2 a:hover {
+  color: var(--blue);
 }
 
 header .logo {
-    color: var(--azul);
-    font-family: 'Arial Black', Times;
-    font-size: 40px;
-    margin-left: 5px;
+  color: var(--blue);
+  font-family: "Arial Black", Times;
+  font-size: 48px;
+  margin-left: 5px;
+  padding-right: 25px;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 4px;
+  font-stretch: ;
 }
 
 header nav a {
-    text-decoration: none;
-    color: #AAA;
-    margin-right: 10px;
+  text-decoration: none;
+  color: var(--white);
+  margin-right: 10px;
 }
 
 header nav a:hover {
-    color: #0f63e0;
+  color: var(--blue);
+}
+
+.featured {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0px 100px 0 0;
+  padding: 0 0 80px 0;
+  color: var(--white);
+  font-family: "Bebas Neue", sans-serif;
+  height: 82vh;
+}
+
+.featured iframe {
+  border: 3px var(--blue) dotted;
+  border-radius: 15px;
+  margin-top: 90px;
+}
+
+.featured h3 {
+  font-size: 48px;
+  padding: 20px 0 0 0;
+  margin: 0 auto 0 auto;
+  letter-spacing: 6px;
+  text-align: center;
+}
+
+.title {
+  margin-top: 300px;
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+  -webkit-text-stroke: 1px var(--black);
+}
+
+.browse {
+  width: 100%;
+  color: var(--gray);
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+.video-container {
+  gap: 10px;
+}
+
+.video-container img {
+  padding-bottom: 60px;
 }
