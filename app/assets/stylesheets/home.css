@@ -93,7 +93,7 @@ header nav a:hover {
   justify-content: center;
   align-items: flex-start;
   margin: 0px 100px 0 0;
-  padding: 0 0 80px 0;
+  padding: 0 0 170px 0;
   color: var(--white);
   font-family: "Roboto", sans-serif;
   width: 100%;
@@ -129,6 +129,38 @@ header nav a:hover {
   color: var(--gray);
   padding-top: 5px;
   width: 40%;
+}
+
+.featured-btn {
+  display: flex;
+  gap: 10px;
+}
+
+.featured-btn button {
+  margin: 20px 0 0 0;
+  padding: 25px 0px;
+  display: flex;
+  border-radius: 5px;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  color: #333;
+  opacity: 1;
+  background-color: var(--white);
+  width: 200px;
+  height: 30%;
+  border: 0;
+}
+
+.btn-2 {
+  color: var(--white);
+  background-color: var(--gray);
+  width: 80%;
+  height: 30%;
+  border: 0;
 }
 
 .title {
