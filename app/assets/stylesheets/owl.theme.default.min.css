@@ -14,8 +14,6 @@
 .owl-theme .owl-nav [class*="owl-"] {
   color: #fff;
   font-size: 14px;
-  margin: 5px;
-  padding: 4px 7px;
   background: #d6d6d6;
   display: inline-block;
   cursor: pointer;
