@@ -15,6 +15,8 @@ $(".owl-carousel").owlCarousel({
       items: 5,
       nav: true,
       loop: true,
+      slideBy: 1,
+      dots: false,
     },
   },
 });
