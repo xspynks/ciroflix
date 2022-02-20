@@ -11,14 +11,12 @@ $(".owl-carousel").owlCarousel({
     600: {
       items: 3,
       nav: false,
-      loop: true,
     },
     1000: {
       items: 5,
       nav: true,
       loop: true,
       slideBy: 1,
-      dots: false,
     },
   },
 });
