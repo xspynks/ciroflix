@@ -8,6 +8,7 @@
   -webkit-tap-highlight-color: transparent;
   position: relative;
   width: 100%;
+  margin-right: 3px;
 }
 .owl-carousel {
   display: none;
@@ -19,7 +20,6 @@
   -ms-touch-action: pan-Y;
   touch-action: manipulation;
   -moz-backface-visibility: hidden;
-  margin-right: 3px;
 }
 .owl-carousel .owl-stage:after {
   content: ".";
