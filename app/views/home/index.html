@@ -37,7 +37,7 @@
   </section>
 
   <div class="browse">
-    <div class="carousel">
+    <div class="owl-carousel owl-theme">
       <h3>Popular no Ciroflix</h3>
       <div class="video-container">
         <div class="item"><img src="https://i.ibb.co/y4xcPBT/cover.jpg" /></div>
@@ -100,9 +100,25 @@
 <footer>
   <p>
     &lt;/&gt; com 💙 por
-    <a href="https://twitter.com/rafaeldepauladj" target="_blank"
-      >Rafael de Paula</a
-    >, utilizando HTML5 e CSS3. Hospedado no
+    <a href="https://github.com/xspynks" target="_blank">Rafael de Paula</a>,
+    utilizando HTML5 e CSS3. Hospedado no
     <a href="https://heroku.com" target="_blank">Heroku</a>. Versão 1.0.
   </p>
 </footer>
+
+<script
+  language="JavaScript"
+  type="text/javascript"
+  src="jquery.min.js"
+></script>
+<script
+  language="JavaScript"
+  type="text/javascript"
+  src="app/assets/owlcarousel/owl.carousel.min.js"
+></script>
+
+<script>
+  $(document).ready(function () {
+    $(".owl-carousel").owlCarousel();
+  });
+</script>
