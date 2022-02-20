@@ -19,7 +19,8 @@ a:-webkit-any-link {
 
 body {
   background: var(--black);
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Poppins", Times, serif;
+  -webkit-font-smoothing: antialiased;
 }
 .container {
   margin: 0 60px 0 60px;
@@ -192,8 +193,8 @@ header nav a:hover {
 .browse h3 {
   color: var(--gray);
   font-family: "Poppins", sans-serif;
-  font-size: 22px;
-  font-weight: bolder;
+  font-size: 24px;
+  font-weight: 900;
   padding-bottom: 10px;
 }
 
