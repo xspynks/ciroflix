@@ -1,12 +1,12 @@
     <main class="container">
       <header>
         <div class="navigation-1">
-        <div class="logo">
-           <%= image_tag "logo.png", height: 40 %></div>
+        <div class="logo-header">
+           <a href="/"><%= image_tag "logo.png", alt: "Logo Ciroflix", height: 40 %></div></a>
 
           <!-- <h2 class="logo">CIROFLIX</h2> -->
           <nav>
-            <a href="#">Início</a>
+            <a href="/">Início</a>
             <a href="#">Blog</a>
             <a href="mailto:xspynks@gmail.com target="_blank>Contato</a>
           </nav>
@@ -354,9 +354,12 @@ Limpar o nome dos caminhoneiros (e de todos que precisam) não é caridade e mui
                       </div>
                     </div>
         </div>
+        
     </main>
-
-    <footer>
+    
+    <footer> 
+    <div class="logo-footer">
+    <%= image_tag "logo.png", height: 40 %></div>
       <p>Desenvolvido por <a href="https://github.com/xspynks" target="_blank">Rafael de Paula</a>.</p>     
         <h5>v1.0</h5>
     </footer>
