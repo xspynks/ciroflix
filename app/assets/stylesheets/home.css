@@ -342,4 +342,8 @@ footer a:hover {
   .btn-2 {
     width: 50%;
   }
+
+  footer {
+    flex-direction: column;
+  }
 }
