@@ -295,6 +295,14 @@ footer a:hover {
   .container {
     margin: 30px;
   }
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navigation-2 {
+    visibility: hidden;
+  }
 
   .featured {
     margin: 0 auto 0 auto;
