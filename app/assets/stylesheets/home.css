@@ -197,12 +197,6 @@ header nav a:hover {
 .carousel {
   height: 100%;
   width: 100%;
-  position: relative;
-  overflow: scroll;
-  white-space: nowrap;
-  display: inline-block;
-  overflow-y: hidden;
-  padding: 0;
 }
 
 .video-container {
