@@ -267,3 +267,31 @@ footer a {
 footer a:hover {
   color: var(--blue);
 }
+
+@media screen and (max-width: 1320px) {
+  header {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .featured {
+    background-size: cover;
+    background-position: top right;
+    padding-bottom: 0px;
+  }
+
+  .featured-description {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    text-align: center;
+  }
+
+  .container {
+    margin: 30px;
+  }
+}
