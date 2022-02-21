@@ -278,8 +278,10 @@ footer a:hover {
   .featured {
     background-size: cover;
     background-position: top right;
-    padding-bottom: 0px;
-    margin: 0;
+    margin: 0 auto 0 auto;
+    background: none;
+    padding: 20px 0 60px 0;
+    height: 100%;
   }
 
   .featured-description {
@@ -311,6 +313,8 @@ footer a:hover {
   .featured {
     margin: 0 auto 0 auto;
     background: none;
+    padding: 20px 0 60px 0;
+    height: 100%;
   }
 
   .featured h2 {
@@ -343,8 +347,8 @@ footer a:hover {
     width: 50%;
   }
 
-  .carousel h3 {
-    padding-top: 10px;
+  .browse h3 {
+    padding: 30px 0 20px 0;
   }
 
   footer {
