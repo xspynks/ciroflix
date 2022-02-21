@@ -59,8 +59,10 @@ header .navigation-1 {
 
 header .navigation-2 {
   display: flex;
+  align-items: flex-end;
   gap: 15px;
   color: var(--white);
+  height: 100%;
 }
 
 .navigation-2 a:hover {
