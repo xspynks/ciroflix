@@ -295,39 +295,39 @@ footer a:hover {
   .container {
     margin: 30px;
   }
-}
 
-.featured {
-  margin: 0 auto 0 auto;
-  background: none;
-}
+  .featured {
+    margin: 0 auto 0 auto;
+    background: none;
+  }
 
-.featured h2 {
-  font-size: 36px;
-}
+  .featured h2 {
+    font-size: 36px;
+  }
 
-.featured-title {
-  width: 100%;
-}
+  .featured-title {
+    width: 100%;
+  }
 
-.featured-info {
-  width: 100%;
-  padding-bottom: 15px;
-}
+  .featured-info {
+    width: 100%;
+    padding-bottom: 15px;
+  }
 
-.featured-description {
-  width: 100%;
-  padding-bottom: 50px;
-}
+  .featured-description {
+    width: 100%;
+    padding-bottom: 50px;
+  }
 
-.featured-btn {
-  width: 100%;
-}
+  .featured-btn {
+    width: 100%;
+  }
 
-.btn {
-  width: 50%;
-}
+  .btn {
+    width: 50%;
+  }
 
-.btn-2 {
-  width: 50%;
+  .btn-2 {
+    width: 50%;
+  }
 }
