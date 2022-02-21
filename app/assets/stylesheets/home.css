@@ -300,6 +300,10 @@ footer a:hover {
     justify-content: space-between;
   }
 
+  header .navigation-1 {
+    gap: 20px;
+  }
+
   header .navigation-2 {
     display: none;
   }
