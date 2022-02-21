@@ -73,8 +73,7 @@ header .logo {
   color: var(--blue);
   font-family: "Arial Black", Times;
   font-size: 48px;
-  margin-left: 5px;
-  padding-right: 25px;
+  margin: 10px 30px 0 0;
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 4px;
 }
