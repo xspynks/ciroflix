@@ -279,6 +279,7 @@ footer a:hover {
     background-size: cover;
     background-position: top right;
     padding-bottom: 0px;
+    margin: 0;
   }
 
   .featured-description {
@@ -286,7 +287,7 @@ footer a:hover {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 475px) {
   body {
     text-align: center;
   }
@@ -294,4 +295,39 @@ footer a:hover {
   .container {
     margin: 30px;
   }
+}
+
+.featured {
+  margin: 0 auto 0 auto;
+  background: none;
+}
+
+.featured h2 {
+  font-size: 36px;
+}
+
+.featured-title {
+  width: 100%;
+}
+
+.featured-info {
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.featured-description {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.featured-btn {
+  width: 100%;
+}
+
+.btn {
+  width: 50%;
+}
+
+.btn-2 {
+  width: 50%;
 }
