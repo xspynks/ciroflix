@@ -343,6 +343,10 @@ footer a:hover {
     width: 50%;
   }
 
+  .carousel h3 {
+    padding-top: 10px;
+  }
+
   footer {
     flex-direction: column;
   }
