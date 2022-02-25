@@ -1,0 +1,8 @@
+body {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+body a:visited {
+  color: var(--white);
+}
