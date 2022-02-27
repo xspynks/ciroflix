@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "home#index"
 
-  get '/',									to: 'home#index', as: :home_index
+  # get '/',									to: 'home#index', as: :home_index
   get '/watch',             to: 'watch#index', as: :watch_index
 
  devise_scope :user do
