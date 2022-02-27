@@ -22,7 +22,29 @@
     
   </head>
   <body>
-  
+  <main class="container">
+      <header>
+        <div class="navigation-1">
+        <div class="logo-header">
+           <a href="/"><%= image_tag "logo.png", alt: "Logo Ciroflix", height: 40 %></div></a>
+
+          <!-- <h2 class="logo">CIROFLIX</h2> -->
+          <nav>
+            <a href="/">Início</a>
+            <a href="#">Blog</a>
+            <a href="mailto:xspynks@gmail.com" target="_blank">Contato</a>
+          </nav>
+        </div>
+
+        <div class="navigation-2">
+            <a href="#"><i class="fa-brands fa-instagram fa-xl	"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter fa-xl	"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin fa-xl	"></i></a>
+          </a>
+
+        </div>
+      </header>
+      
     <%= yield %>    
   </body>
 </html>

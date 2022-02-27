@@ -9,9 +9,10 @@ Rails.application.routes.draw do
   root "home#index"
 
   get '/',									to: 'home#index', as: :home_index
+  get '/watch',             to: 'watch#index', as: :watch_index
 
  devise_scope :user do
-        get '/users/sign_out', to: 'devise/sessions#destroy', as: :session_destroy
+  get '/users/sign_out', to: 'devise/sessions#destroy', as: :session_destroy
     
   end
 
