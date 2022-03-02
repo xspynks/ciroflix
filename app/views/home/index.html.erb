@@ -175,31 +175,6 @@ Limpar o nome dos caminhoneiros (e de todos que precisam) não é caridade e mui
 
 
     </main>
-<%
-=begin%>
- <%= %>
-
-<li><%= link_to "Videos", videos_path %></li>
-<li><%= link_to "Usuários", control_users_index_path %></li>
-
-    
-<% if user_signed_in? %>
-<ul>
-<p>Olá, <%= current_user.email %></p>
-  <li><%= link_to "Sair", destroy_user_session_path, method: :get	%></li>
-</ul>
-<p id="notice"><%= notice %></p>
-<% else %>
-<ul>
-<li><%= link_to "Cadastro de novo usuário", new_user_registration_path	 %></li>
-<li><%= link_to "Logar", user_session_path %></li>
-</ul>
-    <p id="notice"><%= notice %></p>
-
-<% end %>  
-<%
-=end%>
-
 
     <footer> 
     <div class="logo-footer">
@@ -216,3 +191,4 @@ Limpar o nome dos caminhoneiros (e de todos que precisam) não é caridade e mui
     <script src="assets/owl.carousel.min.js"></script>
     <script src="assets/setup.js"></script> -->
 
+}

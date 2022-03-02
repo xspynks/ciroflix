@@ -1,0 +1,22 @@
+.container-login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  padding: auto 0 auto 0;
+  font-family: "Roboto Serif", sans-serif;
+}
+
+.container-login h2 {
+  padding: 200px 0 40px 0;
+}
+
+.container-login input {
+  padding: 5px 0;
+  margin: 5px 0;
+}
+
+.container-login input[type="submit"] {
+  margin-bottom: 20px;
+}

@@ -31,7 +31,15 @@ gem "jbuilder"
 gem 'devise'
 
 # Minimal authorization through OO design and pure Ruby classes
-gem "pundit"
+# gem "pundit
+
+# CanCanCan Authorization
+# gem 'cancancan'
+
+# RailsAdmin is a Rails engine that provides an easy-to-use interface for managing your data
+gem 'rails_admin', ['>= 3.0.0.rc3', '< 4']
+
+# gem "rails_admin_pundit", :github => "sudosu/rails_admin_pundit"
 
 
 
@@ -79,3 +87,6 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+gem "sassc-rails"
+gem "sassc-rails"
+gem "sassc-rails"

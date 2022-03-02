@@ -298,7 +298,7 @@ footer .logo-footer {
   }
 
   .container {
-    margin: 30px;
+    margin: 0 30px;
   }
   header {
     display: flex;
