@@ -27,8 +27,11 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Awesome Print
+gem "awesome_print"
+
 # Devise is a flexible authentication solution for Rails based on Warden. [https://github.com/heartcombo/devise]
-gem 'devise'
+# gem 'devise'
 
 # Minimal authorization through OO design and pure Ruby classes
 # gem "pundit
@@ -37,7 +40,7 @@ gem 'devise'
 # gem 'cancancan'
 
 # RailsAdmin is a Rails engine that provides an easy-to-use interface for managing your data
-gem 'rails_admin', ['>= 3.0.0.rc3', '< 4']
+# gem 'rails_admin', ['>= 3.0.0.rc3', '< 4']
 
 # gem "rails_admin_pundit", :github => "sudosu/rails_admin_pundit"
 
