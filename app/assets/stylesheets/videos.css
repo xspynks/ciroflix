@@ -1,8 +1,6 @@
-body {
-  background-color: var(--black);
-  color: var(--white);
+.videos {
+  margin-top: 40px;
 }
 
-body a:visited {
-  color: var(--white);
+.form-inputs {
 }

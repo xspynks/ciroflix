@@ -14,8 +14,10 @@ class VideosTest < ApplicationSystemTestCase
     visit videos_url
     click_on "New video"
 
+    fill_in "Description", with: @video.description
     fill_in "Title", with: @video.title
     fill_in "Url", with: @video.url
+    fill_in "Views", with: @video.views
     click_on "Create Video"
 
     assert_text "Video was successfully created"
@@ -26,8 +28,10 @@ class VideosTest < ApplicationSystemTestCase
     visit video_url(@video)
     click_on "Edit this video", match: :first
 
+    fill_in "Description", with: @video.description
     fill_in "Title", with: @video.title
     fill_in "Url", with: @video.url
+    fill_in "Views", with: @video.views
     click_on "Update Video"
 
     assert_text "Video was successfully updated"

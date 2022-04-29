@@ -30,6 +30,9 @@ gem "jbuilder"
 # Awesome Print
 gem "awesome_print"
 
+# Simple Form
+gem "simple_form"
+
 # Devise is a flexible authentication solution for Rails based on Warden. [https://github.com/heartcombo/devise]
 # gem 'devise'
 
