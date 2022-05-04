@@ -1,3 +1,5 @@
+<%= render partial: "shared/header" %>
+
 <section class="featured">
   <div class="featured-title">
     <h2>Reparem bem...</h2>
@@ -12,9 +14,8 @@
     </p>
   </div>
   <div class="featured-btn">
-    <a href="https://www.youtube.com/watch?v=5ladnEWz-vo" target="_blank"
-      ><button role="button" class="btn">▶ Assistir</button></a
-    >
+    <a href="https://www.youtube.com/watch?v=5ladnEWz-vo" target="_blank">
+    <button role="button" class="btn">▶ Assistir</button></a>
     <button role="button" class="btn-2">+ Meus favoritos</button>
   </div>
 </section>
@@ -197,16 +198,4 @@
   </div>
 </div>
 
-<footer>
-  <div class="logo-footer"><%= image_tag "logo.png", height: 40 %></div>
-  <p>
-    Desenvolvido por
-    <a href="https://github.com/xspynks" target="_blank">Rafael de Paula</a>.
-  </p>
-  <h5>v0.3</h5>
-</footer>
-
-<script src="https://xspynks.github.io/ciroflix/app/javascript/jquery.min.js"></script>
-<script src="https://xspynks.github.io/ciroflix/app/javascript/owl.carousel.min.js"></script>
-<script src="https://xspynks.github.io/ciroflix/app/javascript/setup.js"></script>
-
+<%= render partial: "shared/footer" %>
