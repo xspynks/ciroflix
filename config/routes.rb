@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  namespace :admin do
+      resources :homes
+
+      root to: "homes#index"
+    end
   resources :videos 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
