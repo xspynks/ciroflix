@@ -233,7 +233,7 @@ DEPENDENCIES
   jbuilder
   pg (~> 1.1)
   puma (~> 5.0)
-  rails (~> 7.0.2, >= 7.0.2.2)
+  rails (~> 7.0.2.4)
   sassc-rails
   selenium-webdriver
   simple_form
@@ -245,7 +245,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.0.3p157
+   ruby 3.1.2p20
 
 BUNDLED WITH
-   2.3.6
+   2.3.12
