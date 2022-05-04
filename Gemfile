@@ -37,7 +37,7 @@ gem "simple_form"
 gem "sassc-rails"
 
 # Admin Panel
-gem "administrate"
+# gem "administrate"
 
 # Devise is a flexible authentication solution for Rails based on Warden. [https://github.com/heartcombo/devise]
 # gem 'devise'
