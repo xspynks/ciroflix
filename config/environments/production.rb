@@ -92,6 +92,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   
   # Heroku Devise Configg
-  config.action_mailer.default_url_options = { host: 'ciroflix.herokuapp.com', port: 3000 }
+  # config.action_mailer.default_url_options = { host: 'ciroflix.herokuapp.com', port: 3000 }
 
 end
