@@ -1,8 +1,8 @@
 class VideoPolicy < ApplicationPolicy
 
-  def index? 
-    user.admin?
-  end
+  # def index? 
+  #   user.admin?
+  # end
 
 
   class Scope < Scope

@@ -1,4 +1,5 @@
 class VideosController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_video, only: %i[ show edit update destroy ]
 
   # GET /videos or /videos.json
@@ -65,6 +66,6 @@ class VideosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def video_params
-      params.require(:video).permit(:name, :url, :description, :category_id)
+      params.require(:video).permit(:title, :description, :category, :url, :status)
     end
 end

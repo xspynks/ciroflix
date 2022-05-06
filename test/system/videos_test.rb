@@ -14,9 +14,10 @@ class VideosTest < ApplicationSystemTestCase
     visit videos_url
     click_on "New video"
 
-    fill_in "Category", with: @video.category_id
+    fill_in "Category", with: @video.category
     fill_in "Description", with: @video.description
-    fill_in "Name", with: @video.name
+    fill_in "Status", with: @video.status
+    fill_in "Title", with: @video.title
     fill_in "Url", with: @video.url
     click_on "Create Video"
 
@@ -28,9 +29,10 @@ class VideosTest < ApplicationSystemTestCase
     visit video_url(@video)
     click_on "Edit this video", match: :first
 
-    fill_in "Category", with: @video.category_id
+    fill_in "Category", with: @video.category
     fill_in "Description", with: @video.description
-    fill_in "Name", with: @video.name
+    fill_in "Status", with: @video.status
+    fill_in "Title", with: @video.title
     fill_in "Url", with: @video.url
     click_on "Update Video"
 
