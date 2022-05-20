@@ -6,9 +6,12 @@
   <div class="form-inputs">
     <%= f.input :title %>
     <%= f.input :description %>
-    <%= f.input :category %>
-    <%= f.input :url %>
-    <%= f.input :status %>
+    <%= select_tag "video[category][]", options_for_select(Video.categories.map {|k, v| [Video.translate_enum_name(:categories, k), k]}, nil), class: 'form-control' %>
+    <%= f.input :youtube_url %>
+    <%= f.input :youtube_id, label: "Youtube ID" %>
+    <label>Status</label>
+    <%= f.input :active %>
+
   </div>
 
   <div class="form-actions">

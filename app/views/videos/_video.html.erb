@@ -16,12 +16,25 @@
 
   <p>
     <strong>Url:</strong>
-    <%= video.url %>
+    <%= video.youtube_url %>
+  </p>
+
+  <p>
+    <strong>YouTube ID:</strong>
+    <iframe src='https://youtube.com/embed/<%= @video.youtube_id %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
   </p>
 
   <p>
     <strong>Status:</strong>
-    <%= video.status %>
+    <%= video.active %>
   </p>
+
+   <div class="">
+  <% video.pictures.each do |pic| %>
+    <% next unless pic.file.present? %>
+    <%= image_tag pic.file_url %>
+    <%= button_to "Destroy this picture", pic, method: :delete %>
+  <% end %>
+  </div>
 
 </div>

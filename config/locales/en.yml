@@ -30,4 +30,13 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      video:
+        categories:
+          popular_at_ciroflix: Populares no Ciroflix
+          ciro_games: Ciro Games
+          cirao_on_tv: Cirão na TV
+        video_statuses:
+          video_enabled: Visível
+          video_disabled: Invisível
