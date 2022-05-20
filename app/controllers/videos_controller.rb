@@ -9,6 +9,7 @@ class VideosController < ApplicationController
 
   # GET /videos/1 or /videos/1.json
   def show
+    @new_picture = @video.pictures.build
   end
 
   # GET /videos/new
@@ -23,6 +24,7 @@ class VideosController < ApplicationController
   # POST /videos or /videos.json
   def create
     @video = Video.new(video_params)
+    
 
     respond_to do |format|
       if @video.save
@@ -66,6 +68,6 @@ class VideosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def video_params
-      params.require(:video).permit(:title, :description, :category, :url, :status)
+      params.require(:video).permit(:title, :description, :category, :youtube_url, :youtube_id, :active)
     end
 end

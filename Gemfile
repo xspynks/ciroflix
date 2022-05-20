@@ -36,6 +36,9 @@ gem "simple_form"
 # Use Sass to process CSS
 gem "sassc-rails"
 
+# File upload with CarrierWave
+gem 'carrierwave', '~> 2.0'
+
 # Admin Panel
 # gem "administrate"
 
