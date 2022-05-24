@@ -68,6 +68,9 @@ class VideosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def video_params
-      params.require(:video).permit(:title, :description, :category, :youtube_url, :youtube_id, :active)
+
+      
+      # context = { controller: self.videos.name, action: create }
+      params.require(:video).permit_all_parameters = true(:title, :description, :category, :youtube_url, :youtube_id, :active)
     end
 end

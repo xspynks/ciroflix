@@ -1,3 +1,5 @@
+<%= render partial: "shared/header" %>
+
 <h1>New video</h1>
 
 <%= render "form", video: @video %>
@@ -7,3 +9,5 @@
 <div>
   <%= link_to "Back to videos", videos_path %>
 </div>
+
+<%= render partial: "shared/footer" %>

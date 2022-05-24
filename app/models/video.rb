@@ -1,4 +1,5 @@
 class Video < ApplicationRecord
+  belongs_to :home
   has_many :pictures, as: :picturable
 
   validates :title, presence: :true
