@@ -43,7 +43,7 @@ gem 'carrierwave', '~> 2.0'
 # gem "administrate"
 
 # Devise is a flexible authentication solution for Rails based on Warden. [https://github.com/heartcombo/devise]
-# gem 'devise'
+gem 'devise'
 
 # Minimal authorization through OO design and pure Ruby classes
 # gem "pundit
