@@ -146,38 +146,9 @@
     </div>
   </div>
 </div>
-
 <div class="browse">
   <div class="carousel">
     <h3>Cirão na Televisão</h3>
-    <div class="video-container owl-carousel owl-theme" id="videos">
-      <% @videos.each do |video| %>
-        <div class="item" id="<%= dom_id video %>">
-
-          <p>
-            <strong>Title:</strong>
-            <%= video.title %>
-          </p>
-
-          <p>
-            <strong>Description:</strong>
-            <%= video.description %>
-          </p>
-
-          <p>
-            <strong>Category:</strong>
-            <%= video.category %>
-          </p>
-
-          <% video.pictures.each do |pic| %>
-            <% next unless pic.file.present? %>
-            <%= image_tag pic.file_url %>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
-      
-    <!-- >
     <div class="video-container owl-carousel owl-theme">
       <div class="item">
         <a href="https://www.youtube.com/watch?v=pUcRVMuWxW8" target="_blank">
@@ -224,7 +195,6 @@
         </a>
       </div>
     </div>
-    <-->
   </div>
 </div>
 

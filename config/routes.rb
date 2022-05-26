@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "home#index"
   
-  
+  # get '/watch',             to: 'watches#index', as: :watch
 
 end
   
