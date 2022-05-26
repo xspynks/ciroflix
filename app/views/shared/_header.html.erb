@@ -2,12 +2,13 @@
   <div class="navigation-1">
     <div class="nav-left-box">
       <div class="logo-header">
-        <%= link_to image_tag("logo.png", height: 40, alt: "Logo Ciroflix") %>
+        <%= link_to image_tag("logo.png", height: 40, alt: "Logo Ciroflix"), root_path %>
       </div>
 
       <nav>
-        <a href="/">Início</a>
-        <a href="mailto:xspynks@gmail.com" target="_blank">Contato</a>
+        <%= link_to 'Início', root_path %>
+        <%= link_to 'Videos', videos_path %>
+        <%= mail_to "xspynks@gmail.com", "Contato" %>
       </nav>
     </div>
     <div class="navigation-2">
