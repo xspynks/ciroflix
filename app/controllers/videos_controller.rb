@@ -1,6 +1,6 @@
 class VideosController < ApplicationController
-  before_action :authenticate_admin!
   before_action :set_video, only: %i[ show edit update destroy ]
+  before_action :authenticate_admin!
 
   # GET /videos or /videos.json
   def index
@@ -9,7 +9,6 @@ class VideosController < ApplicationController
 
   # GET /videos/1 or /videos/1.json
   def show
-    @video = Video.find_by(id: params[:id])
     @new_picture = @video.pictures.build
   end
 
@@ -30,10 +29,10 @@ class VideosController < ApplicationController
     respond_to do |format|
       if @video.save
         format.html { redirect_to video_url(@video), notice: "Video was successfully created." }
-        format.json { render :show, status: :created, location: @video }
+        # format.json { render :show, status: :created, location: @video }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @video.errors, status: :unprocessable_entity }
+        # format.json { render json: @video.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -43,10 +42,10 @@ class VideosController < ApplicationController
     respond_to do |format|
       if @video.update(video_params)
         format.html { redirect_to video_url(@video), notice: "Video was successfully updated." }
-        format.json { render :show, status: :ok, location: @video }
+        # format.json { render :show, status: :ok, location: @video }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @video.errors, status: :unprocessable_entity }
+        # format.json { render json: @video.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -57,7 +56,7 @@ class VideosController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to videos_url, notice: "Video was successfully destroyed." }
-      format.json { head :no_content }
+      # format.json { head :no_content }
     end
   end
 
