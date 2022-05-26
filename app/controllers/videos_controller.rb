@@ -9,6 +9,7 @@ class VideosController < ApplicationController
 
   # GET /videos/1 or /videos/1.json
   def show
+    @video = Video.find_by(id: params[:id])
     @new_picture = @video.pictures.build
   end
 
