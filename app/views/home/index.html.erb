@@ -149,51 +149,31 @@
 <div class="browse">
   <div class="carousel">
     <h3>Cirão na Televisão</h3>
-    <div class="video-container owl-carousel owl-theme">
-      <div class="item">
-        <a href="https://www.youtube.com/watch?v=pUcRVMuWxW8" target="_blank">
-          <%= image_tag("thumbs/canal_livre.jpg", alt: "Ciro Gomes no Canal
-          Livre") %>
-        </a>
-      </div>
-      <div class="item">
-        <a href="hhttps://www.youtube.com/watch?v=PMKjl6bT6D4" target="_blank">
-          <%= image_tag("thumbs/datena_01.jpg", alt: "Ciro Gomes conversa com
-          Datena") %>
-        </a>
-      </div>
-      <div class="item">
-        <a href="https://www.youtube.com/watch?v=aN1oCHVrYxU&t" target="_blank">
-          <%= image_tag("thumbs/ciro_cnn_01.jpg", alt: "Ciro Gomes em entrevista
-          para a CNN News") %>
-        </a>
-      </div>
-      <div class="item">
-        <a href="https://www.youtube.com/watch?v=jhUsG5ntzBw" target="_blank">
-          <%= image_tag("thumbs/ciro_my_news_01.jpg", alt: "Ciro Gomes no
-          MyNews") %>
-        </a>
-      </div>
-      <div class="item">
-        <a href="https://www.youtube.com/watch?v=eN46ZQWODs4" target="_blank">
-          <%= image_tag("thumbs/ciro_sbt_01.jpg", alt: "Ciro Gomes no SBT") %>
-        </a>
-      </div>
-      <div class="item">
-        <a
-          href="https://www.youtube.com/watch?v=AlQTEz41Oxk&t=685s"
-          target="_blank"
-        >
-          <%= image_tag("thumbs/ciro_cnn_02.jpg", alt: "Ciro Gomes na CNN News")
-          %>
-        </a>
-      </div>
-      <div class="item">
-        <a href="https://www.youtube.com/watch?v=QVC1vahiLVw" target="_blank">
-          <%= image_tag("thumbs/roda-viva-1991.jpg", alt: "Ciro Gomes no Roda
-          Viva em 1991") %>
-        </a>
-      </div>
+    <div class="video-container owl-carousel owl-theme" id="videos">
+      <% @videos.each do |video| %>
+        <div class="item" id="<%= dom_id video %>">
+
+          <p>
+            <strong>Title:</strong>
+            <%= video.title %>
+          </p>
+
+          <p>
+            <strong>Description:</strong>
+            <%= video.description %>
+          </p>
+
+          <p>
+            <strong>Category:</strong>
+            <%= video.category %>
+          </p>
+
+          <% video.pictures.each do |pic| %>
+            <% next unless pic.file.present? %>
+            <%= image_tag pic.file_url %>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

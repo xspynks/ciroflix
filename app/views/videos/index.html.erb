@@ -1,10 +1,47 @@
+<%= render partial: "shared/header" %>
+
 <p style="color: green"><%= notice %></p>
 
 <h1>Videos</h1>
 
 <div id="videos">
   <% @videos.each do |video| %>
-    <%= render video %>
+    <div id="<%= dom_id video %>">
+  <p>
+    <strong>Title:</strong>
+    <%= video.title %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= video.description %>
+  </p>
+
+  <p>
+    <strong>Category:</strong>
+    <%= video.category %>
+  </p>
+
+  <p>
+    <strong>Url:</strong>
+    <%= video.youtube_url %>
+  </p>
+
+  <p>
+    <strong>Status:</strong>
+    <%= video.active %>
+  </p>
+
+   <div class="">
+  <% video.pictures.each do |pic| %>
+    <% next unless pic.file.present? %>
+    <%= image_tag pic.file_url %>
+    <%= button_to "Destroy this picture", pic, method: :delete %>
+  <% end %>
+  </div>
+
+</div>
+
     <p>
       <%= link_to "Show this video", video %>
     </p>
@@ -12,3 +49,5 @@
 </div>
 
 <%= link_to "New video", new_video_path %>
+
+<%= render partial: "shared/footer" %>

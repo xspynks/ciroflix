@@ -1,12 +1,12 @@
 class Video < ApplicationRecord
   has_many :pictures, as: :picturable
 
-  validates :title, presence: :true
+  validates :title, presence: true
   validates :description, presence: false
-  validates :category, presence: :true
-  validates :youtube_url, presence: :true
-  validates :youtube_id, presence: :true
-  validates :active, presence: :true  
+  validates :category, presence: true
+  validates :youtube_url, presence: true
+  validates :youtube_id, presence: true
+  validates :active, presence: true  
 
   enum category: {
     popular_at_ciroflix: 1,

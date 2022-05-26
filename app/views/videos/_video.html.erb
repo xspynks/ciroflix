@@ -1,3 +1,5 @@
+<%= render partial: "shared/header" %>
+
 <div id="<%= dom_id video %>">
   <p>
     <strong>Title:</strong>
@@ -20,8 +22,8 @@
   </p>
 
   <p>
-    <strong>YouTubeID:</strong>
-    <%= video.youtube_id %>
+    <strong>YouTube ID:</strong>
+    <iframe src='https://youtube.com/embed/<%= @video.youtube_id %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
   </p>
 
   <p>
@@ -38,3 +40,5 @@
   </div>
 
 </div>
+
+<%= render partial: "shared/footer" %>
