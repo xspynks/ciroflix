@@ -82,5 +82,3 @@ test:
 production:
   <<: *default
   database: ciroflix_production
-  username: xspynks
-  password: 793V107s
