@@ -22,5 +22,5 @@ class ApplicationRecord < ActiveRecord::Base
     end
   end
   
-  primary_abstract_class
+  # primary_abstract_class
 end
