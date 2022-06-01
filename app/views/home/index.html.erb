@@ -170,7 +170,7 @@
 
           <% video.pictures.each do |pic| %>
             <% next unless pic.file.present? %>
-            <%= image_tag pic.file_url %>
+            <%= link_to image_tag(pic.file_url), video %>
           <% end %>
         </div>
       <% end %>

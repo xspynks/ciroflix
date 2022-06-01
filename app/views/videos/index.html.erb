@@ -32,7 +32,7 @@
     <%= video.active %>
   </p>
 
-   <div class="">
+   <div>
   <% video.pictures.each do |pic| %>
     <% next unless pic.file.present? %>
     <%= image_tag pic.file_url %>
