@@ -11,7 +11,7 @@
           <div class="info-box">
             <% video.pictures.each do |pic| %>
               <% next unless pic.file.present? %>
-              <%= image_tag pic.file_url %>
+              <%= image_tag pic.file_url %>                
             <% end %>
             <h1><%= video.title %></h1>
             <h2><%= video.description %></h2>

@@ -231,9 +231,16 @@ nav {
   gap: 7px;
 }
 
-.item img {
-  padding: 5px 5px 0 0;
-  height: fit-content;
+.item {
+  text-align: center;
+  img {
+    padding: 5px 5px 10px 0;
+    height: fit-content;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
 }
 
 .carousel::-webkit-scrollbar {
@@ -253,7 +260,7 @@ nav {
 }
 
 footer {
-  border-top: 4px groove var(--blue);
+  border-top: 2px groove var(--blue);
   margin: 35px 0 20px 0;
   display: flex;
   flex-direction: column;
