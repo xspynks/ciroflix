@@ -25,6 +25,24 @@
 <%= turbo_frame_tag "browser_frame" do %>
   <div class="browse">
     <div class="carousel">
+      <h3>Cirão na Televisão</h3>
+      <div class="video-container owl-carousel owl-theme" id="videos">
+        <% @videos.each do |video| %>
+          <div class="item" id="<%= dom_id video %>">          
+            <% video.pictures.each do |pic| %>
+              <% next unless pic.file.present? %>
+              <%= link_to image_tag(pic.file_url), video, data: { turbo_frame: "_top" } %>
+            <% end %>
+            <h2>
+              <%= video.title %>
+            </h2>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="browse">
+    <div class="carousel">
       <h3>Popular no Ciroflix</h3>
       <div class="video-container owl-carousel owl-theme">
         <div class="item">
@@ -90,7 +108,6 @@
       </div>
     </div>
   </div>
-
   <div class="browse">
     <div class="carousel">
       <h3>Ciro Games</h3>
@@ -148,25 +165,7 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="browse">
-    <div class="carousel">
-      <h3>Cirão na Televisão</h3>
-      <div class="video-container owl-carousel owl-theme" id="videos">
-        <% @videos.each do |video| %>
-          <div class="item" id="<%= dom_id video %>">          
-            <% video.pictures.each do |pic| %>
-              <% next unless pic.file.present? %>
-              <%= link_to image_tag(pic.file_url), video, data: { turbo_frame: "_top" } %>
-            <% end %>
-            <h2>
-              <%= video.title %>
-            </h2>
-          </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
+  </div>  
 <% end %>
 
 <%= render partial: "shared/footer" %>
