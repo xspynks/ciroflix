@@ -1,0 +1,46 @@
+.video-box {
+  font-family: "Poppins", Times, serif;
+  margin-top: 40px;
+  line-height: 1.5;
+}
+
+.videos {
+  margin-top: 100px;
+}
+
+.form-inputs {
+}
+
+.media-box {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  padding-top: 40px;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    margin-bottom: 20px;
+    width: max-content;
+    height: max-content;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    width: 600px;
+    font-size: 16px;
+  }
+}
+
+iframe {
+  width: 50vw;
+  height: 70vh;
+}

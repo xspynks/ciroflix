@@ -41,6 +41,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_26_060516) do
   end
 
   create_table "videos", force: :cascade do |t|
+    t.bigint "category_id"
     t.string "title"
     t.text "description"
     t.integer "category", default: 1
@@ -49,6 +50,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_26_060516) do
     t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_videos_on_category_id"
   end
 
 end

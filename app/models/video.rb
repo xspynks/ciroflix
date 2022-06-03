@@ -1,5 +1,5 @@
 class Video < ApplicationRecord
-  has_many :pictures, as: :picturable
+  has_many :pictures, as: :picturable  
 
   # validates :title, presence: true
   # validates :description, presence: false
