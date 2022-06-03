@@ -1,27 +1,28 @@
 <%= render partial: "shared/header" %>
+<%= turbo_frame_tag "hero_frame" do %>
+  <div id="<%= dom_id video %>">
+    <section class="video-box">
+      <div class="container">
+        
 
-<div id="<%= dom_id video %>">
-  <section class="video-box">
-    <div class="container">
-      
+        
 
-      
-
-        <div class="media-box">
-          <div class="info-box">
-            <% video.pictures.each do |pic| %>
-              <% next unless pic.file.present? %>
-              <%= image_tag pic.file_url %>                
-            <% end %>
-            <h1><%= video.title %></h1>
-            <h2><%= video.description %></h2>
+          <div class="media-box">
+            <div class="info-box">
+              <% video.pictures.each do |pic| %>
+                <% next unless pic.file.present? %>
+                <%= image_tag pic.file_url %>                
+              <% end %>
+              <h1><%= video.title %></h1>
+              <h2><%= video.description %></h2>
+            </div>
+            <iframe src='https://youtube.com/embed/<%= @video.youtube_id %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
           </div>
-          <iframe src='https://youtube.com/embed/<%= @video.youtube_id %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
-        </div>
-      
+        
 
-    </div>
-  </section>
-</div>
+      </div>
+    </section>
+  </div>
+<% end %>
 
 <%= render partial: "shared/footer" %>
