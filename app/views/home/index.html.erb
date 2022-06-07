@@ -20,154 +20,137 @@
       <button role="button" class="btn-2">+ Meus favoritos</button>
     </div>
   </section>
-<% end %>
 
-<%= turbo_frame_tag "browser_frame" do %>
-  <div class="browse">
-    <div class="carousel">
-      <h3>Cirão na Televisão</h3>
-      <div class="video-container owl-carousel owl-theme" id="videos">
-        <% @videos.each do |video| %>
-          <div class="item" id="<%= dom_id video %>">          
-            <% video.pictures.each do |pic| %>
-              <% next unless pic.file.present? %>
-              <%= link_to image_tag(pic.file_url), video,
-                                                   data: { turbo_frame: "hero_frame",
-                                                           turbo_action: "advance" } %>
-            <% end %>
-            <h2>
-              <%= video.title %>
-            </h2>
+
+  <%= turbo_frame_tag "browser_frame" do %>
+    <%= render partial: "videos/video-carousel" %>
+    
+    <div class="browse">
+      <div class="carousel">
+        <h3>Popular no Ciroflix</h3>
+        <div class="video-container owl-carousel owl-theme">
+          <div class="item">
+            <a href="https://www.youtube.com/watch?v=fre4rhk4kg8" target="_blank">
+              <%= image_tag("thumbs/btg-pactual-2022.jpg", alt: "Ciro Gomes em
+              entrevista para o BTG Pactual em 2022") %>
+            </a>
           </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
-  <div class="browse">
-    <div class="carousel">
-      <h3>Popular no Ciroflix</h3>
-      <div class="video-container owl-carousel owl-theme">
-        <div class="item">
-          <a href="https://www.youtube.com/watch?v=fre4rhk4kg8" target="_blank">
-            <%= image_tag("thumbs/btg-pactual-2022.jpg", alt: "Ciro Gomes em
-            entrevista para o BTG Pactual em 2022") %>
-          </a>
-        </div>
-        <div class="item">
-          <a href="https://www.youtube.com/watch?v=yE55i99tZWg" target="_blank">
-            <%= image_tag("thumbs/caetano.jpg", alt: "Ciro Gomes em uma conversa
-            com Caetano Veloso") %>
-          </a>
-        </div>
-        <div class="item">
-          <a href="https://www.youtube.com/watch?v=QebI8GcGoyI&t" target="_blank">
-            <%= image_tag("thumbs/cuida_cast.jpg", alt: "Ciro Gomes conversa com o
-            maior canal de Caminhoneiros do Brasil") %>
-          </a>
-        </div>
-        <div class="item">
-          <a href="https://www.youtube.com/watch?v=n6vVlG8raXY&t" target="_blank">
-            <%= image_tag("thumbs/flow.jpg", alt: "Cirão no Flow Podcast") %>
-          </a>
-        </div>
-        <div class="item">
-          <a href="https://www.youtube.com/watch?v=YUEH3q18o6o" target="_blank">
-            <%= image_tag("thumbs/pedro-cardoso.jpg", alt: "Uma ótima conversa
-            entre Ciro Gomes e Pedro Cardoso, o Agostinho") %>
-          </a>
-        </div>
-        <div class="item">
-          <a href="https://www.youtube.com/watch?v=I5tiXg9HvKo&t" target="_blank">
-            <%= image_tag("thumbs/rafinha.jpg", alt: "Ciro Gomes conversa com
-            Rafinha Bastos") %>
-          </a>
-        </div>
-        <div class="item">
-          <a href="https://www.youtube.com/watch?v=UwHGTQ4twqk&t" target="_blank">
-            <%= image_tag("thumbs/roda-viva-2018.jpg", alt: "Ciro Gomes no Roda
-            Viva em 2018") %>
-          </a>
-        </div>
-        <div class="item">
-          <a href="https://www.youtube.com/watch?v=U6A8mkBFJ_g" target="_blank">
-            <%= image_tag("thumbs/galas-feios.jpg", alt: "Ciro Gomes conversad com
-            os jornalistas do canal Galãs Feios") %>
-          </a>
-        </div>
-        <div class="item">
-          <a href="https://www.youtube.com/watch?v=wIEm49LoY3E" target="_blank">
-            <%= image_tag("thumbs/react-cirao-mario-frias.jpg", alt: "Ciro Gomes
-            no Roda Viva em 2018") %>
-          </a>
-        </div>
+          <div class="item">
+            <a href="https://www.youtube.com/watch?v=yE55i99tZWg" target="_blank">
+              <%= image_tag("thumbs/caetano.jpg", alt: "Ciro Gomes em uma conversa
+              com Caetano Veloso") %>
+            </a>
+          </div>
+          <div class="item">
+            <a href="https://www.youtube.com/watch?v=QebI8GcGoyI&t" target="_blank">
+              <%= image_tag("thumbs/cuida_cast.jpg", alt: "Ciro Gomes conversa com o
+              maior canal de Caminhoneiros do Brasil") %>
+            </a>
+          </div>
+          <div class="item">
+            <a href="https://www.youtube.com/watch?v=n6vVlG8raXY&t" target="_blank">
+              <%= image_tag("thumbs/flow.jpg", alt: "Cirão no Flow Podcast") %>
+            </a>
+          </div>
+          <div class="item">
+            <a href="https://www.youtube.com/watch?v=YUEH3q18o6o" target="_blank">
+              <%= image_tag("thumbs/pedro-cardoso.jpg", alt: "Uma ótima conversa
+              entre Ciro Gomes e Pedro Cardoso, o Agostinho") %>
+            </a>
+          </div>
+          <div class="item">
+            <a href="https://www.youtube.com/watch?v=I5tiXg9HvKo&t" target="_blank">
+              <%= image_tag("thumbs/rafinha.jpg", alt: "Ciro Gomes conversa com
+              Rafinha Bastos") %>
+            </a>
+          </div>
+          <div class="item">
+            <a href="https://www.youtube.com/watch?v=UwHGTQ4twqk&t" target="_blank">
+              <%= image_tag("thumbs/roda-viva-2018.jpg", alt: "Ciro Gomes no Roda
+              Viva em 2018") %>
+            </a>
+          </div>
+          <div class="item">
+            <a href="https://www.youtube.com/watch?v=U6A8mkBFJ_g" target="_blank">
+              <%= image_tag("thumbs/galas-feios.jpg", alt: "Ciro Gomes conversad com
+              os jornalistas do canal Galãs Feios") %>
+            </a>
+          </div>
+          <div class="item">
+            <a href="https://www.youtube.com/watch?v=wIEm49LoY3E" target="_blank">
+              <%= image_tag("thumbs/react-cirao-mario-frias.jpg", alt: "Ciro Gomes
+              no Roda Viva em 2018") %>
+            </a>
+          </div>
 
-        <div class="item">
-          <a href="https://www.youtube.com/watch?v=HGBWeGCnwpU" target="_blank">
-            <%= image_tag("thumbs/inteligencia_ltda.jpg", alt: "Ciro Gomes no Roda
-            Viva em 2018") %>
-          </a>
+          <div class="item">
+            <a href="https://www.youtube.com/watch?v=HGBWeGCnwpU" target="_blank">
+              <%= image_tag("thumbs/inteligencia_ltda.jpg", alt: "Ciro Gomes no Roda
+              Viva em 2018") %>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="browse">
-    <div class="carousel">
-      <h3>Ciro Games</h3>
-      <div class="video-container owl-carousel owl-theme">
-        <div class="item">
-          <a href="https://www.youtube.com/watch?v=7KTu82xcMfU&t" target="_blank">
-            <%= image_tag("thumbs/ciro_games_01_tico_santa_cruz.jpg", alt: "Ciro
-            Gomes entrevista Tico Santa Cruz") %>
-          </a>
-        </div>
-        <div class="item">
-          <a href="https://www.youtube.com/watch?v=1rvjhl8657U" target="_blank">
-            <%= image_tag("thumbs/ciro_games_02_tasso_jereissati.jpg", alt: "Ciro
-            Gomes e o Senador Tasso Jereissati") %>
-          </a>
-        </div>
-        <div class="item">
-          <a href="https://www.youtube.com/watch?v=ZA_L0aZLvQ4" target="_blank">
-            <%= image_tag("thumbs/ciro_games_03_nil_agra_gustavo_mendes.jpg", alt:
-            "Ciro Gomes, Nil Agra e Gustavo Mendes em conversa") %>
-          </a>
-        </div>
-        <div class="item">
-          <a href="https://www.youtube.com/watch?v=ArBdoUBPVOA" target="_blank">
-            <%= image_tag("thumbs/ciro_games_04_gustavo_cabral.jpg", alt: "Ciro
-            Gomes bate um papo com Gustavo Cabral") %>
-          </a>
-        </div>
-        <div class="item">
-          <a href="https://www.youtube.com/watch?v=X7Dzgufx-mM" target="_blank">
-            <%= image_tag("thumbs/ciro_games_05_paulo_markun_nelson_marconi.jpg",
-            alt: "Entrevista com Paulo Markun e Nelson Marconi") %>
-          </a>
-        </div>
-        <div class="item">
-          <a href="https://www.youtube.com/watch?v=1Xc9xTmBznI" target="_blank">
-            <%=
-            image_tag("thumbs/ciro_games_06_aldo_rebelo_mauro_benevides_filho.jpg",
-            alt: "Cirão conversa com Aldo Rebelo e Mauro Benevides Filho") %>
-          </a>
-        </div>
-        <div class="item">
-          <a href="https://www.youtube.com/watch?v=deyT9UT5WNE" target="_blank">
-            <%=
-            image_tag("thumbs/ciro_gomes_07_andre_marinho_eduardo_costa_pinto.jpg",
-            alt: "Ciro Gomes em conversa com Andre Marinho e Eduarco Costa Pinto")
-            %>
-          </a>
-        </div>
-        <div class="item">
-          <a href="https://www.youtube.com/watch?v=WhxQA4AhP7o" target="_blank">
-            <%= image_tag("thumbs/ciro_gomes_08_andre_contarato.jpg", alt: "Ciro
-            Gomes conversa com o Senador Andre Contarato") %>
-          </a>
+    <div class="browse">
+      <div class="carousel">
+        <h3>Ciro Games</h3>
+        <div class="video-container owl-carousel owl-theme">
+          <div class="item">
+            <a href="https://www.youtube.com/watch?v=7KTu82xcMfU&t" target="_blank">
+              <%= image_tag("thumbs/ciro_games_01_tico_santa_cruz.jpg", alt: "Ciro
+              Gomes entrevista Tico Santa Cruz") %>
+            </a>
+          </div>
+          <div class="item">
+            <a href="https://www.youtube.com/watch?v=1rvjhl8657U" target="_blank">
+              <%= image_tag("thumbs/ciro_games_02_tasso_jereissati.jpg", alt: "Ciro
+              Gomes e o Senador Tasso Jereissati") %>
+            </a>
+          </div>
+          <div class="item">
+            <a href="https://www.youtube.com/watch?v=ZA_L0aZLvQ4" target="_blank">
+              <%= image_tag("thumbs/ciro_games_03_nil_agra_gustavo_mendes.jpg", alt:
+              "Ciro Gomes, Nil Agra e Gustavo Mendes em conversa") %>
+            </a>
+          </div>
+          <div class="item">
+            <a href="https://www.youtube.com/watch?v=ArBdoUBPVOA" target="_blank">
+              <%= image_tag("thumbs/ciro_games_04_gustavo_cabral.jpg", alt: "Ciro
+              Gomes bate um papo com Gustavo Cabral") %>
+            </a>
+          </div>
+          <div class="item">
+            <a href="https://www.youtube.com/watch?v=X7Dzgufx-mM" target="_blank">
+              <%= image_tag("thumbs/ciro_games_05_paulo_markun_nelson_marconi.jpg",
+              alt: "Entrevista com Paulo Markun e Nelson Marconi") %>
+            </a>
+          </div>
+          <div class="item">
+            <a href="https://www.youtube.com/watch?v=1Xc9xTmBznI" target="_blank">
+              <%=
+              image_tag("thumbs/ciro_games_06_aldo_rebelo_mauro_benevides_filho.jpg",
+              alt: "Cirão conversa com Aldo Rebelo e Mauro Benevides Filho") %>
+            </a>
+          </div>
+          <div class="item">
+            <a href="https://www.youtube.com/watch?v=deyT9UT5WNE" target="_blank">
+              <%=
+              image_tag("thumbs/ciro_gomes_07_andre_marinho_eduardo_costa_pinto.jpg",
+              alt: "Ciro Gomes em conversa com Andre Marinho e Eduarco Costa Pinto")
+              %>
+            </a>
+          </div>
+          <div class="item">
+            <a href="https://www.youtube.com/watch?v=WhxQA4AhP7o" target="_blank">
+              <%= image_tag("thumbs/ciro_gomes_08_andre_contarato.jpg", alt: "Ciro
+              Gomes conversa com o Senador Andre Contarato") %>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </div>  
+    </div> 
+  <% end %> 
 <% end %>
 
 <%= render partial: "shared/footer" %>
