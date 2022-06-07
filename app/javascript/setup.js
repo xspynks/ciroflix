@@ -8,7 +8,6 @@ $(".owl-carousel").owlCarousel({
     0: {
       items: 1,
       nav: false,
-      autoplay: true,
     },
     600: {
       items: 3,
