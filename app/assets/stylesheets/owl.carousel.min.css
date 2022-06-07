@@ -79,19 +79,11 @@
 .owl-carousel .owl-nav button.owl-prev,
 .owl-carousel button.owl-dot {
   background: 0 0;
-  color: var(--blue);
+  color: var(--gray);
   border: none;
   padding: 0 !important;
   font: "Roboto Serif", sans-serif;
   font-size: 30px;
-}
-
-.owl-prev {
-  margin-right: 5px !important;
-}
-
-.owl-next {
-  margin-left: 5px;
 }
 .owl-carousel.owl-loading {
   opacity: 0;
