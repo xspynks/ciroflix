@@ -14,12 +14,7 @@ Rails.application.routes.draw do
   root "home#index"
 
   authenticated :admin do
-    mount ActiveAnalytics::Engine, at: "stats" # http://localhost:3000/analytics
+    mount ActiveAnalytics::Engine, at: "stats"  # http://localhost:3000/analytics
   end
-end
 
 end
-  
-
-
-
