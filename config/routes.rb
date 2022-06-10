@@ -13,8 +13,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "home#index"
 
-  authenticated :admin do
-    mount ActiveAnalytics::Engine, at: "stats"  # http://localhost:3000/analytics
-  end
+  # config/routes.rb
+authenticate :admin do # Supposing there is a User#admin? method
+  mount ActiveAnalytics::Engine, at: "analytics" # http://localhost:3000/analytics
+end
 
 end
