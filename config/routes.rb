@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   # config/routes.rb
 authenticate :admin do # Supposing there is a User#admin? method
-  mount ActiveAnalytics::Engine, at: "analytics" # http://localhost:3000/analytics
+  mount ActiveAnalytics::Engine, at: "stats" # http://localhost:3000/analytics
 end
 
 end
