@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "home#index"
 
+  mount ActiveAnalytics::Engine, at: "stats"  # http://localhost:3000/analytics
+
 end
   
 
