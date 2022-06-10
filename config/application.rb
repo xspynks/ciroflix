@@ -20,3 +20,13 @@ module Ciroflix
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
+
+# ...
+module Railsanalytics
+  class Application < Rails::Application
+
+  # Add this line
+    config.middleware.use Rack::CrawlerDetect
+# ...
+  end
+end

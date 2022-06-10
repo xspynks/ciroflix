@@ -1,11 +1,12 @@
 class ApplicationController < ActionController::Base
     before_action :record_page_view
-
-  def record_page_view
-    # Add a condition to record only your canonical domain
-    # and use a gem such as crawler_detect to skip bots.
-    ActiveAnalytics.record_request(request)
-  end
+    
+    def record_page_view
+        # This condition should skip bots.
+        unless request.is_crawler?
+        ActiveAnalytics.record_request(request)
+        end
+    end
 private 
 
 def user_not_authorized
