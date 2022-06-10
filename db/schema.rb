@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_10_005131) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_10_032549) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -45,6 +45,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_10_005131) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "messages", force: :cascade do |t|
+    t.bigint "room_id", null: false
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_messages_on_room_id"
+  end
+
   create_table "pictures", force: :cascade do |t|
     t.string "file"
     t.string "picturable_type", null: false
@@ -52,6 +60,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_10_005131) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["picturable_type", "picturable_id"], name: "index_pictures_on_picturable"
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "videos", force: :cascade do |t|
@@ -67,4 +81,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_10_005131) do
     t.index ["category_id"], name: "index_videos_on_category_id"
   end
 
+  add_foreign_key "messages", "rooms"
 end
