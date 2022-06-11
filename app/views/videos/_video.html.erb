@@ -4,21 +4,17 @@
   <div id="<%= dom_id video %>">
     <section class="video-box">
       <div class="container"> 
-      <h4 class="breadcrumb">Home > Videos > <%= video.title %></h4>
-          <div class="media-box">
-            <div class="info-box">
-              <h1><%= video.title %></h1>
-              <h3><%= video.description %></h3>
-            </div>
-            <iframe src='https://youtube.com/embed/<%= @video.youtube_id %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+        <h4 class="breadcrumb">Home > Videos > <%= video.title %></h4>
+        <div class="media-box">
+          <div class="info-box">
+            <h1><%= video.title %></h1>
+            <h3><%= video.description %></h3>
           </div>
-
-        
+          <iframe src='https://youtube.com/embed/<%= @video.youtube_id %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+        </div>       
       </div>
     </section>
   </div>
-
-  <%= render partial: "videos/video-carousel" %>
 <% end %>
 
 <%= render partial: "shared/footer" %>

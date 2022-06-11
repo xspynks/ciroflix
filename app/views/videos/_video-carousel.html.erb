@@ -1,16 +1,20 @@
-<div class="browse">
-  <div class="carousel">
-    <h3 class="video-title">Todos os vídeos</h3>
-    <div class="video-container owl-carousel owl-theme" id="videos">
-      <% @videos.each do |video| %>
-        <div class="item" id="<%= dom_id video %>">          
-          <% video.pictures.shuffle.each do |pic| %>
-            <% next unless pic.file.present? %>
-            <%= link_to image_tag(pic.file_url), video, data: { turbo_frame: "content_frame", turbo_action: "replace", } %>
-          <% end %>
-          <h2><%= video.title %></h2>
-        </div>
-      <% end %>
+<turbo-frame data-turbo-action="replace" id="content_frame" src="videos/video-carousel">
+  <div class="browse">
+    <div class="carousel">
+
+      <h3 class="video-title">Todos os vídeos</h3>
+      <div class="video-container owl-carousel owl-theme" id="videos">
+        <% @videos.each do |video| %>
+          <div class="item" id="<%= dom_id video %>">          
+            <% video.pictures.shuffle.each do |pic| %>
+              <% next unless pic.file.present? %>
+              <%= link_to image_tag(pic.file_url), video, data: { turbo_frame: "content_frame", turbo_action: "replace"} %>
+            <% end %>
+            <h2><%= video.title %></h2>
+          </div>
+        <% end %>
+      </div>
+
     </div>
   </div>
-</div>
+</turbo-frame>
