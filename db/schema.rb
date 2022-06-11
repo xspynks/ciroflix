@@ -69,16 +69,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_10_032549) do
   end
 
   create_table "videos", force: :cascade do |t|
-    t.bigint "category_id"
     t.string "title"
     t.text "description"
-    t.integer "category", default: 1
+    t.integer "category"
     t.string "youtube_url"
     t.string "youtube_id"
     t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_videos_on_category_id"
   end
 
   add_foreign_key "messages", "rooms"
