@@ -88,3 +88,5 @@ gem "hotwire-livereload", "~> 1.1"
 gem "active_analytics", "~> 0.2.1"
 
 gem "crawler_detect", "~> 1.2"
+
+gem "twitter", "~> 7.0"
