@@ -23,6 +23,7 @@ module TwitterManager
       Twitter::REST::Client.new do |config|
         config.consumer_key        = Rails.application.credentials.dig(:twitter, :api_key)
         config.consumer_secret     = Rails.application.credentials.dig(:twitter, :api_key_secret)
+        config.bearer_token        = Rails.application.credentials.dig(:twitter, :bearer_token)
         config.access_token        = Rails.application.credentials.dig(:twitter, :access_token)
         config.access_token_secret = Rails.application.credentials.dig(:twitter, :access_token_secret)
       end
