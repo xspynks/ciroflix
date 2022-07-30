@@ -1,5 +1,7 @@
 <%= render partial: "shared/header" %>
 
+<%= turbo_frame_tag "main_frame" do %>
+
 <%= turbo_frame_tag "content_frame" do %>
   <section class="featured">
     <div class="featured-title">
@@ -151,5 +153,6 @@
         </div>
       </div>
     </div> 
+<% end %>
 
 <%= render partial: "shared/footer" %>

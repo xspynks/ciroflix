@@ -1,7 +1,5 @@
 class HomeController < ApplicationController
-  
-
   def index
-  @videos = Video.all
+    @videos = Video.all
   end
 end

@@ -5,10 +5,12 @@
         <%= link_to image_tag("logo.png", height: 40, alt: "Logo Ciroflix"), root_path %>
       </div>
 
+      <%= turbo_frame_tag "room_frame" do %>
       <nav>
         <%= link_to 'Início', root_path %>
-        <%= mail_to "xspynks@gmail.com", "Contato" %>
+        <%= link_to 'Bate-papo', room_path(4), "data-turbo-frame": "_top" %>
       </nav>
+      <% end %>
     </div>
     <div class="navigation-2">
       <a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a>

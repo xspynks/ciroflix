@@ -1,14 +1,17 @@
+<%= render partial: "shared/header" %>
+
+
 <p style="color: green"><%= notice %></p>
 
-<h1>Rooms</h1>
+<h1>Salas</h1>
 
 <div id="rooms">
   <% @rooms.each do |room| %>
     <%= render room %>
     <p>
-      <%= link_to "Show this room", room %>
+      <%= link_to "Entrar nessa sala", room %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New room", new_room_path %>
+<%= render partial: "shared/footer" %>
