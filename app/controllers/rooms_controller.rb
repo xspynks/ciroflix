@@ -27,6 +27,7 @@ class RoomsController < ApplicationController
       if @room.save
         format.html { redirect_to room_url(@room), notice: "Room was successfully created." }
         format.json { render :show, status: :created, location: @room }
+        format.turbo_stream
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @room.errors, status: :unprocessable_entity }
@@ -40,6 +41,7 @@ class RoomsController < ApplicationController
       if @room.update(room_params)
         format.html { redirect_to room_url(@room), notice: "Room was successfully updated." }
         format.json { render :show, status: :ok, location: @room }
+        format.turbo_stream
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @room.errors, status: :unprocessable_entity }
