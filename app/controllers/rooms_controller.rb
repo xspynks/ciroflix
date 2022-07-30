@@ -1,6 +1,6 @@
 class RoomsController < ApplicationController
   before_action :set_room, only: %i[ show edit update destroy ]
-  before_action :authenticate_admin!, except: %i[ index show ]
+  before_action :authenticate_admin!, except: %i[ index show room ]
 
   # GET /rooms or /rooms.json
   def index
@@ -12,7 +12,7 @@ class RoomsController < ApplicationController
   end
 
   # GET /rooms/new
-  def new    
+  def new
     @room = Room.new
   end
 

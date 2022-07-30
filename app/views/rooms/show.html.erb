@@ -8,8 +8,7 @@
   <%= render @room %>  
     <%= link_to "Edit this room", edit_room_path(@room) %> |
     <%= link_to "Back to rooms", rooms_path, "data-turbo-frame": "_top" %>
-
-<% end %>
+  <% end %>
 
 <div id="messages">
   <%= render @room.messages %>
