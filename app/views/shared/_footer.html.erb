@@ -5,5 +5,11 @@
     <a href="https://github.com/xspynks" target="_blank">Rafael de Paula</a>.
   </p>
   <h5>v0.1</h5>
-  <p><%= @message_count %> enviadas ao total</p>
+    <%= turbo_stream_from "messages_counter" %>
+    <%
+=begin%>
+ <p id="messages_counter"><%= @message_count %> mensagens enviadas ao total</p> 
+<%
+=end%>
+  </div>
 </footer>

@@ -1,0 +1,19 @@
+.message {
+  border-radius: 8px;
+  margin: 10px 0;
+  background-color: black;
+  width: 100%;
+}
+
+.message-content {
+  display: flex;
+  width: 300px;
+  gap: 5px;
+  padding-left: 8px;
+}
+
+.message-box {
+  .message-date {
+    padding-right: 8px;
+  }
+}

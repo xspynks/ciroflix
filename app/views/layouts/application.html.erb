@@ -19,13 +19,11 @@
     <script src="https://kit.fontawesome.com/86d63c5c3f.js" crossorigin="anonymous"></script>
     <% if Rails.env.development? %>
       <%= javascript_include_tag "hotwire-livereload", defer: true %>
-    <% end %>
-
-    
-  </head>
-  
+    <% end %>    
+  </head>  
 
   <body class="container">   
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>    

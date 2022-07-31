@@ -4,6 +4,7 @@ class VideosController < ApplicationController
 
   # GET /videos or /videos.json
   def index
+    @message_count = Message.count
     @videos = Video.all
   end
 

@@ -1,3 +1,11 @@
-<p id="<%= dom_id message %>">
-  <%= message.created_at.to_s(:short) %>: <%= message.content %>
-</p>
+<div class="message">
+  <div class="message-box">
+    <div class="message-content">
+      <p><b>Malaquias:</b></p>
+      <p id="<%= dom_id message %>"><%= message.content %></p>
+    </div>
+    <div class="message-date">
+      <%= message.created_at.to_s(:short) %>
+    </div>
+    </div>
+</div>

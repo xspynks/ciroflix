@@ -1,20 +1,22 @@
 <%= render partial: "shared/header" %>
 <p style="color: green"><%= notice %></p>
 
-<%= turbo_stream_from @room %>
+<section class="room">
+  <div class="container">
+    <div class="livechat">
+      <%= turbo_stream_from @room %>
 
-<%= turbo_frame_tag "room" do %>
-  <%= render @room %>  
-    <%= link_to "Edit this room", edit_room_path(@room) %> |
-    <%= link_to "Back to rooms", rooms_path, "data-turbo-frame": "_top" %>
+      <%= turbo_frame_tag "room" do %>
+        <%= render @room %>  
+      <% end %>
 
-    <%= button_to "Destroy this room", @room, method: :delete %>
-<% end %>
+      <div id="messages">
+        <%= render @room.messages %>
+      </div>
 
-<div id="messages">
-  <%= render @room.messages %>
-</div>
-
-<%= turbo_frame_tag "new_message", src: new_room_message_path(@room), target: "_top" %>
+      <%= turbo_frame_tag "new_message", src: new_room_message_path(@room), target: "_top" %>
+    </div>
+  </div>
+</section>
 
 <%= render partial: "shared/footer" %>

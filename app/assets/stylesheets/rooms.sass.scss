@@ -1,0 +1,35 @@
+.livechat {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 60px 60 !important;
+  background-color: rgb(29, 29, 29);
+  width: 80%;
+}
+
+input[type="text"] {
+  background-color: rgb(29, 29, 29);
+  border-radius: 4px;
+  height: 40px;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  border: 1px solid white;
+}
+
+input:focus {
+  border-color: #2f7ff7 !important;
+}
+
+.room-title {
+  p {
+    font-weight: bold;
+    font-size: 36px;
+  }
+}
+
+.message-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px;
+}
