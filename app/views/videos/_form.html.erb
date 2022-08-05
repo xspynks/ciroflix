@@ -6,7 +6,7 @@
   <div class="form-inputs">
     <%= f.input :title %>
     <%= f.input :description %>
-    <%= select_tag "video[category][]", options_for_select(Video.categories.map {|k, v| [Video.translate_enum_name(:categories, k), k]}, nil), class: 'form-control' %>
+    <%= select_tag "video[category]", options_for_select(Video.categories.map {|k, v| [Video.translate_enum_name(:category, k), k]}, @video.category), class: 'form-control' %>
     <%= f.input :youtube_url %>
     <%= f.input :youtube_id, label: "Youtube ID" %>
     <label>Status</label>
