@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   devise_scope :admin do
     get "/logout",        to:"devise/sessions#destroy", as: :logout
     get "/login",         to:"devise/sessions#new", as: :login
-    get "/rooms/:slug",                 to: "rooms#show", as: :room_slug
+    get "batepapo",                 to: "rooms#show", as: :livechat
   
   end
   
