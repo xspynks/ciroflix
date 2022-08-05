@@ -9,6 +9,8 @@ class RoomsController < ApplicationController
   # GET /rooms/1 or /rooms/1.json
   def show
     @message_count = Message.count
+    
+    @room = Room.find_by_slug(room_params[:slug])
   end
 
   # GET /rooms/new
@@ -63,11 +65,11 @@ class RoomsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_room
-      @room = Room.find(params[:id])
+      @room = Room.find_by_slug(params[:slug])
     end
 
     # Only allow a list of trusted parameters through.
     def room_params
-      params.require(:room).permit(:name)
+      params.permit(:name, :slug)
     end
 end

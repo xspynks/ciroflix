@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_15_022736) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_05_033854) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -72,17 +72,20 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_15_022736) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "slug"
   end
 
   create_table "videos", force: :cascade do |t|
+    t.bigint "category_id"
     t.string "title"
     t.text "description"
-    t.integer "category"
+    t.integer "category", default: 1
     t.string "youtube_url"
     t.string "youtube_id"
     t.boolean "active", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_videos_on_category_id"
   end
 
   add_foreign_key "messages", "rooms"
