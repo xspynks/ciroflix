@@ -8,9 +8,9 @@ class RoomsController < ApplicationController
 
   # GET /rooms/1 or /rooms/1.json
   def show
-    @message_count = Message.count
-    
     @room = Room.find_by_slug(room_params[:slug])
+    
+    @message_count = Message.count
   end
 
   # GET /rooms/new
