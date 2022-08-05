@@ -16,7 +16,7 @@ class MessagesController < ApplicationController
 
   private
     def set_room
-      @room = Room.find(params[:room_id])
+      @room = Room.find_by(params[:slug])
     end
 
     def message_params
