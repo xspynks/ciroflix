@@ -9,7 +9,7 @@ class RoomsController < ApplicationController
   # GET /rooms/1 or /rooms/1.json
   def show
     @room = Room.find_by_slug("batepapo")
-    
+
     @message_count = Message.count
   end
 

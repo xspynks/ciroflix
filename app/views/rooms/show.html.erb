@@ -5,11 +5,9 @@
   <div class="container">
     <div class="livechat">
       <%= turbo_stream_from @room %>
-
       <%= turbo_frame_tag "room" do %>
         <%= render @room %>  
       <% end %>
-
       <div id="messages">
         <%= render @room.messages %>
       </div>
