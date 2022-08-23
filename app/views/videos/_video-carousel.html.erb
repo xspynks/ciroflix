@@ -5,7 +5,7 @@
       <h3 class="video-title">Todos os vídeos</h3>
       <div class="video-container owl-carousel owl-theme" id="videos">
         <% @videos.each do |video| %>
-          <div class="item" id="<%= dom_id video %>">          
+          <div class="item" id="<%= dom_id video %>">
             <% video.pictures.shuffle.each do |pic| %>
               <% next unless pic.file.present? %>
               <%= link_to image_tag(pic.file_url), video, data: { turbo_frame: "content_frame", turbo_action: "replace"} %>

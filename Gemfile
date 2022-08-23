@@ -90,3 +90,7 @@ gem "active_analytics", "~> 0.2.1"
 gem "crawler_detect", "~> 1.2"
 
 gem "twitter", "~> 7.0"
+
+gem 'erb_lint', require: false
+
+# gem 'rubocop', require: false

@@ -2,11 +2,10 @@
 <html lang="pt-br">
   <head>
     <title>Ciroflix - Assista vídeos de Ciro Gomes grátis</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- 
-  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@200&family=Roboto+Serif:wght@100;300;700;900&display=swap" rel="stylesheet">
@@ -15,18 +14,18 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-    
+
     <script src="https://kit.fontawesome.com/86d63c5c3f.js" crossorigin="anonymous"></script>
     <% if Rails.env.development? %>
       <%= javascript_include_tag "hotwire-livereload", defer: true %>
-    <% end %>    
-  </head>  
+    <% end %>
+  </head>
 
-  <body class="container">   
+  <body class="container">
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>    
+    <%= yield %>
   </body>
   <script src="https://xspynks.github.io/ciroflix/app/javascript/jquery.min.js" defer></script>
   <script src="https://xspynks.github.io/ciroflix/app/javascript/owl.carousel.min.js" defer></script>
